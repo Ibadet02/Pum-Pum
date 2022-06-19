@@ -1,0 +1,80 @@
+@font-face {
+    font-family: RadionB;
+    src: url(../assets/fonts/RadionB-Light.otf) format("opentype");
+}
+
+$nav-height: 75px;
+$nav__links__link: 1em;
+$nav__links__link--bg-color: #22425A;
+$nav__links__link--hover-color: #0d2436;
+$nav__links__link--transition: 400ms;
+
+$info__box-size: 271px;
+$info__box-bg: #FAFAFA;
+
+$orange-button-color: #FF7144;
+
+$filter-sofas--padding: 0 24px;
+@mixin nav__halfs {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav__logo{
+        &__link{
+            text-decoration: none;
+        }
+    }
+}
+@mixin orange-button($padding) {
+    font-family: RadionB;
+    background-color: $orange-button-color;
+    color: #fff;
+    border-radius: 27px;
+    padding: $padding;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+@mixin sofa-figure() {
+    position: relative;
+    flex: 1;
+    background: #F3F3F3;
+    mix-blend-mode: normal;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .sofa__info{
+        position: absolute;
+        bottom: 19.26px;
+        left: 24px;
+        display: flex;
+        &__text, &__price{
+            background-color: #fff;
+            padding: 6px 13px;
+            border-radius: 35px;
+            white-space: nowrap;
+        }
+    }
+}
+
+@mixin sofa-imgs-sizes(){
+    .sofa-1 img{
+        width: 16.875em;
+        height: 4.875em;
+    }
+    .sofa-2 img{
+        width: 6.875em;
+        height: 5.8em;
+    }
+    .sofa-3 img{
+        width: 13.2em;
+        height: 6.18em;
+    }
+    .sofa-4 img{
+        width: 16.83em;
+        height: 4.85em;
+    }
+}
