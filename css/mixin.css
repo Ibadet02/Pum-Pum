@@ -1,4 +1,36 @@
 @font-face {
   font-family: RadionB;
   src: url(../assets/fonts/RadionB-Light.otf) format("opentype");
+}
+@-webkit-keyframes left-1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes left-1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes left-2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes left-2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
 }/*# sourceMappingURL=mixin.css.map */

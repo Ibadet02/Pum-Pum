@@ -63,18 +63,36 @@ $filter-sofas--padding: 0 24px;
 @mixin sofa-imgs-sizes(){
     .sofa-1 img{
         width: 16.875em;
-        height: 4.875em;
+        // height: 4.875em;
     }
     .sofa-2 img{
         width: 6.875em;
-        height: 5.8em;
+        // height: 5.8em;
     }
     .sofa-3 img{
         width: 13.2em;
-        height: 6.18em;
+        // height: 6.18em;
     }
     .sofa-4 img{
         width: 16.83em;
-        height: 4.85em;
+        // height: 4.85em;
+    }
+}
+
+// looping text
+@keyframes left-1{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes left-2{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
     }
 }

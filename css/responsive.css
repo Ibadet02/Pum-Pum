@@ -2,6 +2,38 @@
   font-family: RadionB;
   src: url(../assets/fonts/RadionB-Light.otf) format("opentype");
 }
+@-webkit-keyframes left-1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes left-1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes left-2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+@keyframes left-2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
 @media (max-width: 1340px) {
   .container .flex .ranking {
     padding: 0 25px;
@@ -21,6 +53,11 @@
 
   .container .flex .sofas__right__sofa.sofa-5 {
     padding: 10px;
+  }
+}
+@media (max-width: 1170px) {
+  .container .flex .advertisment .companies__inner .companies-2 {
+    display: flex;
   }
 }
 @media (max-width: 1000px) {

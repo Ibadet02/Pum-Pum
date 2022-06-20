@@ -17,6 +17,11 @@
         padding: 10px;
     }
 }
+@media (max-width: 1170px){
+    .container .flex .advertisment .companies__inner .companies-2{
+        display: flex;
+    }
+}
 @media (max-width: 1000px){
     .container .flex .nav__first-half .nav__links{
         width: 16px;

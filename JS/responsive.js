@@ -22,18 +22,18 @@ const maintainNav__links = () =>{
     }
     
 }
-const images__fig_proportion = 850/720
-const images__fig = document.querySelectorAll('.images__fig')
-const maintainImages__fig = () =>{
-    Array.from(images__fig).forEach(fig=>{
-        let figWidth = fig.offsetWidth
-        fig.style.height = figWidth * images__fig_proportion + 'px'
-    })
-}
+// const images__fig_proportion = 850/720
+// const images__fig = document.querySelectorAll('.images__fig')
+// const maintainImages__fig = () =>{
+//     Array.from(images__fig).forEach(fig=>{
+//         let figWidth = fig.offsetWidth
+//         fig.style.height = figWidth * images__fig_proportion + 'px'
+//     })
+// }
 
 maintainNav__links()
-maintainImages__fig()
+// maintainImages__fig()
 window.addEventListener("resize", ()=>{
     maintainNav__links()
-    maintainImages__fig()
+    // maintainImages__fig()
 })
