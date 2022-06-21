@@ -7,6 +7,7 @@ const openMobile__nav = () =>{
         mobile__nav.classList.toggle(clickedNav)
     })
 }
+openMobile__nav()
 
 const color__circle = document.querySelectorAll('.color__box .color__box__border .circle')
 const sofa_images = document.querySelectorAll('.sofas img')
@@ -30,18 +31,36 @@ const clickedColorFilter = (event) =>{
     Array.from(sofa_images).forEach((img, index)=>{
         img.src = sofas[event.target.dataset.color][index]
     })
-
 }
+Array.from(color__circle).forEach(circle=>{
+    circle.addEventListener('click', clickedColorFilter)
+})
 
+// submit email
 const subscribe_button = document.getElementById('submit-email')
 const clickedSubscribe = (event) =>{
     event.preventDefault()
 }
 subscribe_button.addEventListener('submit', clickedSubscribe)
 
-Array.from(color__circle).forEach(circle=>{
-    circle.addEventListener('click', clickedColorFilter)
+// draggable slide
+
+const slideWrapper = document.querySelector('.companies')
+const innerSlideWrapper = document.querySelector('.companies__inner')
+
+let clicked = false
+let startX
+let x
+var windowWidth = window.innerWidth
+slideWrapper.addEventListener('mousedown',(event)=>{
+    clicked = true
+    startX = event.x
+    console.log(startX)
 })
-
-
-openMobile__nav()
+window.addEventListener('mouseup', (event)=>{
+    clicked = false
+})
+slideWrapper.addEventListener('mousemove',(event)=>{
+    if(!clicked) return
+    event.preventDefault()
+})

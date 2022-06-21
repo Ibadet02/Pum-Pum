@@ -33,4 +33,36 @@
   100% {
     transform: translateX(-200%);
   }
+}
+@-webkit-keyframes image-left-1 {
+  0% {
+    transform: translateX(54%);
+  }
+  100% {
+    transform: translateX(-48%);
+  }
+}
+@keyframes image-left-1 {
+  0% {
+    transform: translateX(54%);
+  }
+  100% {
+    transform: translateX(-48%);
+  }
+}
+@-webkit-keyframes image-left-2 {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-52%);
+  }
+}
+@keyframes image-left-2 {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-52%);
+  }
 }/*# sourceMappingURL=mixin.css.map */
