@@ -4,6 +4,29 @@
     width: 100%;
     .flex{
         position: relative;
+        .scroll-top{
+            width: 3em;
+            height: 3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            right: 1.25em;
+            bottom: 1.25em;
+            background-color: rgba(0, 0, 0, .7);
+            color: orange;
+            border-radius: 50%;
+            font-weight: 600;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: .4s;
+            &.active{
+                bottom: 2.5em;
+                pointer-events: auto;
+                opacity: 1;
+            }
+        }
         .mobile__nav{
             display: flex;
             flex-direction: column;

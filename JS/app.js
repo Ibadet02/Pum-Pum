@@ -72,3 +72,20 @@ const clickedSubscribe = (event) =>{
     event.preventDefault()
 }
 subscribe_button.addEventListener('submit', clickedSubscribe)
+
+// scroll-top
+
+const scrollTop = document.querySelector('.scroll-top')
+
+window.addEventListener('scroll',()=>{
+    if(window.scrollY > 100){
+        scrollTop.classList.add('active')
+    }
+    else{
+        scrollTop.classList.remove('active')
+    }
+})
+
+scrollTop.addEventListener('click',()=>{
+    window.scrollTo(0,0)
+})
