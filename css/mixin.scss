@@ -1,20 +1,30 @@
 @font-face {
-    font-family: RadionB;
+    font-family: Radion B Book;
+    src: url(../assets/fonts/RadionB-Book.otf) format("opentype");
+}
+@font-face {
+    font-family: Radion B Light;
     src: url(../assets/fonts/RadionB-Light.otf) format("opentype");
 }
-
-$nav-height: 75px;
+@font-face {
+    font-family: Radion B Regular;
+    src: url(../assets/fonts/RadionB-Regular.otf) format("opentype");
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$nav-height: 4.6875em;
 $nav__links__link: 1em;
 $nav__links__link--bg-color: #22425A;
 $nav__links__link--hover-color: #0d2436;
 $nav__links__link--transition: 400ms;
-
+$mobile__nav-width: 12.5em;
 $info__box-size: 271px;
 $info__box-bg: #FAFAFA;
 
 $orange-button-color: #FF7144;
 
 $filter-sofas--padding: 0 24px;
+
 @mixin nav__halfs {
     flex-basis: 50%;
     display: flex;
@@ -27,14 +37,19 @@ $filter-sofas--padding: 0 24px;
     }
 }
 @mixin orange-button($padding) {
-    font-family: RadionB;
     background-color: $orange-button-color;
     color: #fff;
     border-radius: 27px;
     padding: $padding;
     text-decoration: none;
-    text-transform: uppercase;
     white-space: nowrap;
+    font-family: 'Radion B Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9375em;
+    line-height: 1.125em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 
 @mixin sofa-figure() {
@@ -51,11 +66,22 @@ $filter-sofas--padding: 0 24px;
         bottom: 19.26px;
         left: 24px;
         display: flex;
-        &__text, &__price{
+        &--bold, &--thin{
+            font-family: 'Radion B Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 1.1875em;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.01em;
             background-color: #fff;
             padding: 6px 13px;
             border-radius: 35px;
             white-space: nowrap;
+        }
+        &--thin{
+            color: rgba(0,0,0,.5);
         }
     }
 }
@@ -97,21 +123,106 @@ $filter-sofas--padding: 0 24px;
     }
 }
 
-// looping companies
-@keyframes image-left-1{
-    0%{
-        transform: translateX(54%);
-    }
-    100%{
-        transform: translateX(-48%);
-    }
+// fonts
+
+@mixin navbar($font-weight){
+    font-family: 'Radion B Book';
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: 1em;
+    line-height: 1.1875em;
+    letter-spacing: 0.02em;
+}
+@mixin info-header(){
+    font-family: 'Radion B Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.875em;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #292C35;
+}
+@mixin info__box-strong(){
+    font-family: 'Radion B Book';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125em;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #292C35;
+}
+@mixin info__box-span(){
+    font-family: 'Radion B Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875em;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: rgba(41, 44, 53, .7);
+}
+@mixin ranking-header(){
+    font-family: 'Radion B Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3.125em;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #292C35;
+    text-align: center;
+}
+@mixin ranking-degree($font-weight){
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: 0.75em;
+    line-height: 1.625em;
+    color: #252525;
 }
 
-@keyframes image-left-2{
-    0%{
-        transform: translateX(50%);
-    }
-    100%{
-        transform: translateX(-52%);
-    }
+@mixin filter-header(){
+    font-family: 'Radion B Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3.125em;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #292C35;
+}
+@mixin filter__color-text(){
+    font-family: 'Radion B Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875em;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #8F8F8F;
+}
+@mixin loop--text(){
+    font-family: 'Radion B Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 5em;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+}
+@mixin advertisement-header(){
+    font-family: 'Radion B Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125em;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #292C35;
+}
+@mixin footer($color, $font-size){
+    font-family: 'Radion B Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-size;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: $color;
 }

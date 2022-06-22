@@ -1,6 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @font-face {
-  font-family: RadionB;
+  font-family: Radion B Book;
+  src: url(../assets/fonts/RadionB-Book.otf) format("opentype");
+}
+@font-face {
+  font-family: Radion B Light;
   src: url(../assets/fonts/RadionB-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: Radion B Regular;
+  src: url(../assets/fonts/RadionB-Regular.otf) format("opentype");
 }
 @-webkit-keyframes left-1 {
   0% {
@@ -32,37 +42,5 @@
   }
   100% {
     transform: translateX(-200%);
-  }
-}
-@-webkit-keyframes image-left-1 {
-  0% {
-    transform: translateX(54%);
-  }
-  100% {
-    transform: translateX(-48%);
-  }
-}
-@keyframes image-left-1 {
-  0% {
-    transform: translateX(54%);
-  }
-  100% {
-    transform: translateX(-48%);
-  }
-}
-@-webkit-keyframes image-left-2 {
-  0% {
-    transform: translateX(50%);
-  }
-  100% {
-    transform: translateX(-52%);
-  }
-}
-@keyframes image-left-2 {
-  0% {
-    transform: translateX(50%);
-  }
-  100% {
-    transform: translateX(-52%);
   }
 }/*# sourceMappingURL=mixin.css.map */

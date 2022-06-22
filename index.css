@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @font-face {
-  font-family: RadionB;
+  font-family: Radion B Book;
+  src: url(../assets/fonts/RadionB-Book.otf) format("opentype");
+}
+@font-face {
+  font-family: Radion B Light;
   src: url(../assets/fonts/RadionB-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: Radion B Regular;
+  src: url(../assets/fonts/RadionB-Regular.otf) format("opentype");
 }
 @-webkit-keyframes left-1 {
   0% {
@@ -34,41 +46,17 @@
     transform: translateX(-200%);
   }
 }
-@-webkit-keyframes image-left-1 {
-  0% {
-    transform: translateX(54%);
-  }
-  100% {
-    transform: translateX(-48%);
-  }
-}
-@keyframes image-left-1 {
-  0% {
-    transform: translateX(54%);
-  }
-  100% {
-    transform: translateX(-48%);
-  }
-}
-@-webkit-keyframes image-left-2 {
-  0% {
-    transform: translateX(50%);
-  }
-  100% {
-    transform: translateX(-52%);
-  }
-}
-@keyframes image-left-2 {
-  0% {
-    transform: translateX(50%);
-  }
-  100% {
-    transform: translateX(-52%);
-  }
+@font-face {
+  font-family: Radion B Book;
+  src: url(../assets/fonts/RadionB-Book.otf) format("opentype");
 }
 @font-face {
-  font-family: RadionB;
+  font-family: Radion B Light;
   src: url(../assets/fonts/RadionB-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: Radion B Regular;
+  src: url(../assets/fonts/RadionB-Regular.otf) format("opentype");
 }
 @keyframes left-1 {
   0% {
@@ -86,111 +74,269 @@
     transform: translateX(-200%);
   }
 }
-@keyframes image-left-1 {
-  0% {
-    transform: translateX(54%);
-  }
-  100% {
-    transform: translateX(-48%);
-  }
-}
-@keyframes image-left-2 {
-  0% {
-    transform: translateX(50%);
-  }
-  100% {
-    transform: translateX(-52%);
-  }
-}
 @media (max-width: 1340px) {
   .container .flex .ranking {
-    padding: 0 25px;
+    padding: 0 1.5625em;
   }
 
-  .container .flex .filter, .container .flex .sofas {
-    padding: 0 15px;
-  }
-
-  .container .flex .sofas {
+  .container .flex .sofas__desktop {
     flex-direction: column;
   }
 
-  .container .flex .sofas__right {
+  .container .flex .sofas__desktop__right {
     height: 345px;
   }
 
-  .container .flex .sofas__right__sofa.sofa-5 {
+  .container .flex .sofas__desktop__right__sofa.sofa-5 {
     padding: 10px;
   }
 }
 @media (max-width: 1170px) {
-  .container .flex .advertisment .companies {
-    box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  body {
+    font-size: 15px;
   }
-  .container .flex .advertisment .companies:hover {
-    cursor: -webkit-grab;
-    cursor: grab;
+
+  .container .flex .info {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
   }
-  .container .flex .advertisment .companies:active {
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
+
+  .container .flex .info__text {
+    align-items: center;
+    justify-content: center;
+  }
+  .container .flex .info__text h3 {
+    text-align: center;
+  }
+  .container .flex .info__text a {
+    align-self: center;
   }
 }
 @media (max-width: 1000px) {
   .container .flex .nav__first-half .nav__links {
-    width: 16px;
+    display: none;
   }
 
-  .container .flex .nav__first-half .nav__links__link.link-4 {
-    transform: translateX(-250px);
-    opacity: 0;
-    transition-delay: 50ms;
-  }
-
-  .container .flex .nav__first-half .nav__links__link.link-3 {
-    transform: translateX(-180px);
-    opacity: 0;
-    transition-delay: 100ms;
-  }
-
-  .container .flex .nav__first-half .nav__links__link.link-2 {
-    transform: translateX(-102px);
-    opacity: 0;
-    transition-delay: 150ms;
-  }
-
-  .container .flex .nav__first-half .nav__links__link.link-1 {
-    opacity: 0;
-    transition-delay: 200ms;
-  }
-
-  .container .flex .mobile__nav {
+  .container .flex .nav__first-half .menu-bar {
     display: flex;
     flex-direction: column;
   }
-  .container .flex .mobile__nav__links__link {
+  .container .flex .nav__first-half .menu-bar__links__link {
     white-space: nowrap;
     text-decoration: none;
     width: 100%;
     color: #000 !important;
     padding: 10px 0 10px 5px;
   }
-  .container .flex .mobile__nav__links__link--active {
+  .container .flex .nav__first-half .menu-bar__links__link--active {
     background-color: #22425A;
     color: #fff !important;
   }
+}
+@media (max-width: 920px) {
+  body {
+    font-size: 13px;
+  }
 
-  .container .flex .nav__first-half .menu-bar {
-    opacity: 1;
-    pointer-events: all;
+  .container .flex .nav__first-half .menu-bar.menu-nav-clicked .bar-1 {
+    transform: rotate(-45deg) translate(-0.3125em, 0.5em);
+  }
+
+  .container .flex .nav__first-half .menu-bar.menu-nav-clicked .bar-3 {
+    transform: rotate(45deg) translate(-0.375em, -0.5em);
+  }
+
+  .container .flex .filter h2 {
+    width: 100%;
+  }
+}
+@media (max-width: 830px) {
+  .container .flex .info__boxes {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 @media (max-width: 665px) {
+  body {
+    font-size: 12px;
+  }
+
   .container .flex .sofas__right__sofa.sofa-5 img {
     width: 100%;
     height: initial;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+
+  .container .flex .nav__first-half .menu-bar.menu-nav-clicked .bar-3 {
+    transform: rotate(45deg) translate(-0.3em, -0.5em);
+  }
+}
+@media (max-width: 638px) {
+  .container .flex .info {
+    margin-top: 2.1em;
+  }
+
+  .container .flex .sofas {
+    height: 200px;
+    margin: 35px;
+    overflow: hidden;
+    margin: 1.625em 1em 0 1em;
+    border-radius: 30px;
+    background-color: #F3F3F3;
+  }
+  .container .flex .sofas__desktop {
+    display: none;
+  }
+  .container .flex .sofas__mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .container .flex .sofas__mobile .sofa-1 img {
+    width: 16.875em;
+  }
+  .container .flex .sofas__mobile .sofa-2 img {
+    width: 6.875em;
+  }
+  .container .flex .sofas__mobile .sofa-3 img {
+    width: 13.2em;
+  }
+  .container .flex .sofas__mobile .sofa-4 img {
+    width: 16.83em;
+  }
+  .container .flex .sofas__mobile figure {
+    display: none;
+    position: absolute;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: circle(0% at 0 50%);
+            clip-path: circle(0% at 0 50%);
+  }
+  .container .flex .sofas__mobile figure img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 20em;
+  }
+  .container .flex .sofas__mobile figure.sofa-5 img {
+    width: 20em;
+  }
+  .container .flex .sofas__mobile figure.active {
+    display: flex;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    -webkit-clip-path: circle(150% at 0 50%);
+            clip-path: circle(150% at 0 50%);
+    transition: 1s;
+    transition-property: -webkit-clip-path;
+    transition-property: clip-path;
+    transition-property: clip-path, -webkit-clip-path;
+  }
+  .container .flex .sofas__mobile figure .sofa__info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    left: 1em;
+    top: 1em;
+  }
+  .container .flex .sofas__mobile figure .sofa__info--bold, .container .flex .sofas__mobile figure .sofa__info--thin {
+    font-family: "Radion B Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.1875em;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    background-color: #fff;
+    padding: 6px 13px;
+    border-radius: 35px;
+    white-space: nowrap;
+  }
+  .container .flex .sofas__mobile figure .sofa__info--bold {
+    color: #000;
+  }
+  .container .flex .sofas__mobile figure .sofa__info--thin {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .container .flex .sofas__mobile .navigation {
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .container .flex .sofas__mobile .navigation .btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .container .flex .sofas__mobile .navigation .btn.active {
+    background-color: green;
+  }
+
+  .container .flex .footer {
+    margin-top: 5em;
+  }
+}
+@media (max-width: 610px) {
+  .container .flex .footer__info {
+    flex-direction: column;
+  }
+  .container .flex .footer__info__left {
+    align-self: center;
+  }
+  .container .flex .footer__info__left .mailing {
+    align-items: center;
+  }
+}
+@media (max-width: 530px) {
+  .container .flex .ranking {
+    padding: 0 0.5625em;
+  }
+
+  .container .flex .filter h2 {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 485px) {
+  .container .flex .ranking__fig__degree {
+    left: 0.3em;
+    bottom: 0.5625em;
+    padding: 0.25625em 0.46875em;
+  }
+
+  .container .flex .footer .copyright__terms {
+    margin-right: 0;
+    gap: 0.7em;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    font-size: 11px;
+  }
+}
+@media (max-width: 390px) {
+  .container .flex .info__text {
+    width: 100%;
+  }
+
+  .container .flex .filter__wrapper {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+}
+@media (max-width: 300px) {
+  body {
+    font-size: 10px;
   }
 }
 .container {
@@ -200,29 +346,53 @@
   position: relative;
 }
 .container .flex .mobile__nav {
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  top: 75px;
-  left: 0;
+  top: 4.6875em;
+  left: -12.5em;
   overflow: hidden;
   height: 100%;
   background-color: #f2f2f2;
-  width: 0;
+  width: 12.5em;
   z-index: 999;
-  transition: width 400ms;
+  transition: 400ms;
+}
+.container .flex .mobile__nav__links__link {
+  font-family: "Radion B Book";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.1875em;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  background-color: transparent;
+  color: #292C35;
+  padding: 1em 0 1em 0.5em;
+}
+.container .flex .mobile__nav__links__link:hover {
+  background-color: #ddd;
+}
+.container .flex .mobile__nav__links__link--active {
+  font-weight: 500;
+  color: #fff;
+  background-color: #22425A;
+}
+.container .flex .mobile__nav__links__link--active:hover {
+  background-color: #22425A;
 }
 .container .flex .mobile__nav.menu-nav-clicked {
-  width: 200px;
+  left: 0;
 }
 .container .flex .nav {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: 75px;
+  height: 4.6875em;
   display: flex;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 2.5em;
   background-color: #fff;
   z-index: 999;
 }
@@ -234,34 +404,31 @@
   align-items: center;
 }
 .container .flex .nav__first-half .menu-bar {
-  display: flex;
-  pointer-events: none;
-  opacity: 0;
+  display: none;
+  opacity: 1;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
-  width: 40px;
-  height: 32px;
-  padding: 6px 7px;
+  width: 2.5em;
+  height: 2em;
+  padding: 0.375em 0.4375em;
   background-color: #22425A;
   cursor: pointer;
   border-radius: 8px;
-  transition: 900ms;
 }
 .container .flex .nav__first-half .menu-bar .bar {
   width: 100%;
-  height: 3px;
+  height: 0.1875em;
   background-color: #fff;
   transition: 400ms;
 }
 .container .flex .nav__first-half .menu-bar.menu-nav-clicked .bar-1 {
-  transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-0.375em, 0.375em);
 }
 .container .flex .nav__first-half .menu-bar.menu-nav-clicked .bar-2 {
   opacity: 0;
 }
 .container .flex .nav__first-half .menu-bar.menu-nav-clicked .bar-3 {
-  transform: rotate(45deg) translate(-7px, -8px);
+  transform: rotate(45deg) translate(-0.35em, -0.5em);
 }
 .container .flex .nav__first-half .nav__logo__link {
   text-decoration: none;
@@ -269,27 +436,25 @@
 .container .flex .nav__first-half .nav__links {
   display: flex;
   align-items: center;
-  width: 330.45px;
   gap: 30px;
-  transition: width 500ms;
 }
 .container .flex .nav__first-half .nav__links__link {
-  text-decoration: none;
-  border-radius: 48px;
-  font-size: 1em;
-  color: #22425A;
-  transition: 400ms;
-  white-space: nowrap;
-  font-family: "Radion B Regular";
+  font-family: "Radion B Book";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1em;
+  line-height: 1.1875em;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 48px;
+  color: #22425A;
+  white-space: nowrap;
 }
 .container .flex .nav__first-half .nav__links__link:hover {
   color: #0d2436;
 }
 .container .flex .nav__first-half .nav__links__link--active {
+  font-weight: 500;
   padding: 7px 20px 10px;
   background-color: #22425A;
   color: #fff;
@@ -299,7 +464,10 @@
   color: #fff;
 }
 .container .flex .nav__first-half .nav__logo__link {
-  padding-right: 4.41px;
+  padding-right: 0.275625em;
+}
+.container .flex .nav__first-half .nav__logo__link svg {
+  width: 6em;
 }
 .container .flex .nav__second-half {
   flex-basis: 50%;
@@ -311,11 +479,14 @@
   text-decoration: none;
 }
 .container .flex .nav__second-half .nav__logo__link {
-  padding-left: 4.41px;
+  padding-left: 0.275625em;
+}
+.container .flex .nav__second-half .nav__logo__link svg {
+  width: 6em;
 }
 .container .flex .nav__second-half .nav__tools {
   display: flex;
-  gap: 25px;
+  gap: 1.5625em;
 }
 .container .flex .nav__second-half .nav__tools__link {
   display: flex;
@@ -324,10 +495,9 @@
 .container .flex .nav__second-half .nav__tools__link svg {
   width: 16.5px;
   height: 16.5px;
-  stroke: red;
 }
 .container .flex .images {
-  margin-top: 75px;
+  margin-top: 4.6875em;
   display: flex;
 }
 .container .flex .images__fig {
@@ -339,36 +509,49 @@
   height: 100%;
 }
 .container .flex .info {
-  margin-top: 67px;
+  margin-top: 4.1875em;
   display: flex;
-  display: none;
   justify-content: space-between;
-  padding: 0 46.5px;
+  padding: 0 2.90625em;
 }
 .container .flex .info__text {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2.5em;
   width: 382px;
-  margin-top: 18px;
+  margin-top: 1.5625em;
+}
+.container .flex .info__text h3 {
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.875em;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #292C35;
 }
 .container .flex .info__text a {
   align-self: flex-start;
-  font-family: RadionB;
   background-color: #FF7144;
   color: #fff;
   border-radius: 27px;
-  padding: 12px 21px;
+  padding: 0.75em 1.3125em;
   text-decoration: none;
-  text-transform: uppercase;
   white-space: nowrap;
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375em;
+  line-height: 1.125em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 .container .flex .info__boxes {
   display: flex;
   gap: 3px;
 }
 .container .flex .info__boxes__box {
-  padding-top: 32px;
+  padding-top: 2em;
   width: 271px;
   height: 271px;
   display: flex;
@@ -383,6 +566,19 @@
 .container .flex .info__boxes__box .info__fig svg {
   position: absolute;
 }
+.container .flex .info__boxes__box span {
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: rgba(41, 44, 53, 0.7);
+}
+.container .flex .info__boxes__box:nth-child(1) span {
+  width: 156px;
+}
 .container .flex .info__boxes__box.box-1 svg {
   right: -23px;
   bottom: 0;
@@ -390,6 +586,14 @@
 }
 .container .flex .info__boxes__box.box-1 strong {
   margin: 14px 0 6px 0;
+  font-family: "Radion B Book";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #292C35;
 }
 .container .flex .info__boxes__box.box-2 svg {
   top: -9px;
@@ -398,24 +602,48 @@
 }
 .container .flex .info__boxes__box.box-2 strong {
   margin-bottom: 6px;
+  font-family: "Radion B Book";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #292C35;
 }
 .container .flex .info__boxes__box.box-3 svg {
   top: 6px;
   right: -44px;
 }
 .container .flex .info__boxes__box.box-3 strong {
-  margin: 26px 0 6px 0;
+  margin: 33px 0 6px 0;
+  font-family: "Radion B Book";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #292C35;
 }
 .container .flex .ranking {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 2.125em;
   align-items: center;
-  padding: 0 40px;
-  margin-top: 79px;
+  padding: 0 2.5em;
+  margin-top: 4.9375em;
 }
 .container .flex .ranking h3 {
   z-index: 100;
+  font-family: "Radion B Light";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3.125em;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #292C35;
+  text-align: center;
 }
 .container .flex .ranking__fig {
   width: 100%;
@@ -434,47 +662,108 @@
 }
 .container .flex .ranking__fig__degree {
   position: absolute;
-  bottom: 25px;
-  left: 24px;
+  bottom: 1.5625em;
+  left: 1.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 0.1875em;
   background-color: #fff;
-  padding: 11px 20px;
-  border-radius: 8px;
+  padding: 0.6875em 1.25em;
+  border-radius: 0.5em;
 }
 .container .flex .ranking__fig__degree .degree__up {
   display: flex;
-  gap: 12px;
+  gap: 0.75em;
   align-items: center;
+}
+.container .flex .ranking__fig__degree .degree__up b {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75em;
+  line-height: 1.625em;
+  color: #252525;
 }
 .container .flex .ranking__fig__degree .degree__up__stars {
   display: flex;
   gap: 1.67px;
 }
 .container .flex .ranking__fig__degree .degree__up__stars div {
-  width: 20px;
-  height: 20px;
+  width: 1.25em;
+  height: 1.25em;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #44AE6F;
 }
+.container .flex .ranking__fig__degree .degree__up__result {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75em;
+  line-height: 1.625em;
+  color: #252525;
+}
+.container .flex .ranking__fig__degree .degree__up__result b {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75em;
+  line-height: 1.625em;
+  color: #252525;
+}
 .container .flex .ranking__fig__degree .degree__down {
   display: flex;
-  gap: 9px;
+  gap: 0.5625em;
+}
+.container .flex .ranking__fig__degree .degree__down__left {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75em;
+  line-height: 1.625em;
+  color: #252525;
+}
+.container .flex .ranking__fig__degree .degree__down__left b {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75em;
+  line-height: 1.625em;
+  color: #252525;
+}
+.container .flex .ranking__fig__degree .degree__down__right {
+  display: flex;
+  align-items: center;
+  gap: 0.3125em;
+}
+.container .flex .ranking__fig__degree .degree__down__right b {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75em;
+  line-height: 1.625em;
+  color: #252525;
 }
 .container .flex .filter {
   display: flex;
   flex-direction: column;
   gap: 59px;
   align-items: center;
-  margin-top: 81px;
+  margin-top: 5.0625em;
   padding: 0 24px;
 }
 .container .flex .filter h2 {
   text-align: center;
+  width: 916px;
+  font-family: "Radion B Light";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3.125em;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #292C35;
 }
 .container .flex .filter__wrapper {
   display: flex;
@@ -485,24 +774,33 @@
 .container .flex .filter__wrapper__left {
   display: flex;
   align-items: center;
-  gap: 19px;
+  gap: 1.1875em;
+}
+.container .flex .filter__wrapper__left .color__text {
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #8F8F8F;
 }
 .container .flex .filter__wrapper__left .color__box {
   display: flex;
-  gap: 11px;
+  gap: 0.6875em;
 }
 .container .flex .filter__wrapper__left .color__box__border {
-  border: 2px solid transparent;
+  border: 0.125em solid transparent;
   border-radius: 50%;
 }
 .container .flex .filter__wrapper__left .color__box__border.default {
-  border: 2px solid rgba(41, 44, 53, 0.3);
+  border: 0.125em solid rgba(41, 44, 53, 0.3);
 }
 .container .flex .filter__wrapper__left .color__box__border .circle {
-  width: 30px;
-  height: 30px;
+  width: 1.875em;
+  height: 1.875em;
   border-radius: 50%;
-  margin: 5px;
+  margin: 0.3125em;
   cursor: pointer;
 }
 .container .flex .filter__wrapper__left .color__box__border .circle:hover {
@@ -521,45 +819,52 @@
   background-color: rgba(190, 186, 184, 0.5);
 }
 .container .flex .filter__wrapper__right a {
-  font-family: RadionB;
   background-color: #FF7144;
   color: #fff;
   border-radius: 27px;
-  padding: 12px 18.5px;
+  padding: 0.75em 1.15625em;
   text-decoration: none;
-  text-transform: uppercase;
   white-space: nowrap;
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375em;
+  line-height: 1.125em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 .container .flex .sofas {
-  margin-top: 26px;
+  margin-top: 1.625em;
   padding: 0 24px;
+}
+.container .flex .sofas__desktop {
   display: flex;
   gap: 3px;
 }
-.container .flex .sofas__left {
+.container .flex .sofas__desktop__left {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
-.container .flex .sofas__left .sofa-1 img {
+.container .flex .sofas__desktop__left .sofa-1 img {
   width: 16.875em;
 }
-.container .flex .sofas__left .sofa-2 img {
+.container .flex .sofas__desktop__left .sofa-2 img {
   width: 6.875em;
 }
-.container .flex .sofas__left .sofa-3 img {
+.container .flex .sofas__desktop__left .sofa-3 img {
   width: 13.2em;
 }
-.container .flex .sofas__left .sofa-4 img {
+.container .flex .sofas__desktop__left .sofa-4 img {
   width: 16.83em;
 }
-.container .flex .sofas__left__first-2, .container .flex .sofas__left__second-2 {
+.container .flex .sofas__desktop__left__first-2, .container .flex .sofas__desktop__left__second-2 {
   display: flex;
   gap: 3px;
   flex-basis: 50%;
 }
-.container .flex .sofas__left__sofa {
+.container .flex .sofas__desktop__left__sofa {
   height: 345px;
   position: relative;
   flex: 1;
@@ -570,22 +875,33 @@
   justify-content: center;
   align-items: center;
 }
-.container .flex .sofas__left__sofa .sofa__info {
+.container .flex .sofas__desktop__left__sofa .sofa__info {
   position: absolute;
   bottom: 19.26px;
   left: 24px;
   display: flex;
 }
-.container .flex .sofas__left__sofa .sofa__info__text, .container .flex .sofas__left__sofa .sofa__info__price {
+.container .flex .sofas__desktop__left__sofa .sofa__info--bold, .container .flex .sofas__desktop__left__sofa .sofa__info--thin {
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.1875em;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.01em;
   background-color: #fff;
   padding: 6px 13px;
   border-radius: 35px;
   white-space: nowrap;
 }
-.container .flex .sofas__right {
+.container .flex .sofas__desktop__left__sofa .sofa__info--thin {
+  color: rgba(0, 0, 0, 0.5);
+}
+.container .flex .sofas__desktop__right {
   flex-basis: 50%;
 }
-.container .flex .sofas__right__sofa {
+.container .flex .sofas__desktop__right__sofa {
   height: 100%;
   position: relative;
   flex: 1;
@@ -596,23 +912,37 @@
   justify-content: center;
   align-items: center;
 }
-.container .flex .sofas__right__sofa .sofa__info {
+.container .flex .sofas__desktop__right__sofa .sofa__info {
   position: absolute;
   bottom: 19.26px;
   left: 24px;
   display: flex;
 }
-.container .flex .sofas__right__sofa .sofa__info__text, .container .flex .sofas__right__sofa .sofa__info__price {
+.container .flex .sofas__desktop__right__sofa .sofa__info--bold, .container .flex .sofas__desktop__right__sofa .sofa__info--thin {
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.1875em;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.01em;
   background-color: #fff;
   padding: 6px 13px;
   border-radius: 35px;
   white-space: nowrap;
 }
-.container .flex .sofas__right__sofa img {
+.container .flex .sofas__desktop__right__sofa .sofa__info--thin {
+  color: rgba(0, 0, 0, 0.5);
+}
+.container .flex .sofas__desktop__right__sofa img {
   width: 27em;
 }
+.container .flex .sofas__mobile {
+  display: none;
+}
 .container .flex .loop {
-  margin-top: 71px;
+  margin-top: 4.4375em;
 }
 .container .flex .loop__fig {
   width: 100%;
@@ -623,11 +953,16 @@
   width: 100%;
 }
 .container .flex .loop__fig__text {
+  font-family: "Radion B Light";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 5em;
+  line-height: 120%;
+  letter-spacing: -0.04em;
   position: absolute;
   left: 0;
   bottom: 11px;
   color: #fff;
-  font-size: 5em;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -644,48 +979,64 @@
           animation-delay: 10s;
 }
 .container .flex .advertisment {
-  margin-top: 54px;
-  padding: 28px 10px 48px 10px;
+  margin-top: 3.375em;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
   overflow: hidden;
 }
+.container .flex .advertisment h3 {
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #292C35;
+}
 .container .flex .advertisment .companies {
-  position: relative;
-  width: 100%;
-  height: 86px;
+  display: flex;
+  justify-content: center;
+  width: 95%;
   overflow: hidden;
-  z-index: 100;
 }
 .container .flex .advertisment .companies__inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 98px;
+  gap: 5.9375em;
   justify-content: center;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 .container .flex .footer {
-  padding: 0 44px;
+  margin-top: 9.8125em;
+  padding: 0 2.75em;
   display: flex;
   flex-direction: column;
-  gap: 74px;
 }
 .container .flex .footer__info {
   display: flex;
-  justify-content: space-between;
+  gap: 7.5625em;
 }
 .container .flex .footer__info__left {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
-  gap: 121px;
 }
 .container .flex .footer__info__left .mailing {
   display: flex;
   flex-direction: column;
+}
+.container .flex .footer__info__left .mailing h3 {
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #292C35;
 }
 .container .flex .footer__info__left .mailing form {
   display: flex;
@@ -697,40 +1048,98 @@
   border-radius: 40px;
   outline: none;
   padding: 9px 16px;
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: rgba(41, 44, 53, 0.5);
 }
 .container .flex .footer__info__left .mailing form button {
-  font-family: RadionB;
   background-color: #FF7144;
   color: #fff;
   border-radius: 27px;
-  padding: 12px 20px;
+  padding: 0.75em 1.25em;
   text-decoration: none;
-  text-transform: uppercase;
   white-space: nowrap;
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375em;
+  line-height: 1.125em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   cursor: pointer;
   border: none;
 }
 .container .flex .footer__info__left .mailing p {
   margin-top: 14px;
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: rgba(41, 44, 53, 0.6);
 }
-.container .flex .footer__info__left__links {
+.container .flex .footer__info__right {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.container .flex .footer__info__right__links {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.container .flex .footer__info__left__links div {
+.container .flex .footer__info__right__links h3 {
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: rgb(41, 44, 53);
+}
+.container .flex .footer__info__right__links div {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.container .flex .footer__info__left__links div a {
+.container .flex .footer__info__right__links div a {
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: rgba(41, 44, 53, 0.8);
   text-decoration: none;
   align-self: flex-start;
 }
-.container .flex .footer__info__left__links div a:hover {
+.container .flex .footer__info__right__links div a:hover {
   text-decoration: underline;
 }
+.container .flex .footer__info__right__icons {
+  display: flex;
+  gap: 1.875em;
+}
+.container .flex .footer__info__right__icons a {
+  align-self: flex-start;
+  text-decoration: none;
+}
+.container .flex .footer__info__right__icons a svg {
+  width: 1.15em;
+  height: 1.15em;
+}
+.container .flex .footer__info__right__icons a img {
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(214deg) brightness(100%) contrast(100%);
+  width: 1.150625em;
+  height: 1.150625em;
+}
 .container .flex .footer__logo {
+  margin-top: 4.625em;
   width: 100%;
 }
 .container .flex .footer__logo a {
@@ -743,4 +1152,34 @@
 }
 .container .flex .footer__logo a figure img {
   width: 100%;
+}
+.container .flex .footer .copyright {
+  margin-top: 0.76em;
+  margin-bottom: 0.6225em;
+  display: flex;
+  justify-content: space-between;
+}
+.container .flex .footer .copyright__text {
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #CCC8C2;
+}
+.container .flex .footer .copyright__terms {
+  display: flex;
+  gap: 3.0625em;
+  margin-right: 3.773125em;
+}
+.container .flex .footer .copyright__terms a {
+  text-decoration: none;
+  font-family: "Radion B Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #CCC8C2;
 }/*# sourceMappingURL=index.css.map */

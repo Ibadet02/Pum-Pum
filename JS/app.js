@@ -1,3 +1,5 @@
+
+//navbar
 const clickedNav = 'menu-nav-clicked'
 const mobile__nav = document.querySelector('.mobile__nav')
 const menu_bar = document.querySelector('.menu-bar')
@@ -9,14 +11,15 @@ const openMobile__nav = () =>{
 }
 openMobile__nav()
 
+// sofa-color-filter
 const color__circle = document.querySelectorAll('.color__box .color__box__border .circle')
-const sofa_images = document.querySelectorAll('.sofas img')
+const sofa_images = document.querySelectorAll('.sofas__desktop img')
 const sofas =
 {
     green: ['./assets/images/sofas/green-1.png', './assets/images/sofas/green-2.png', './assets/images/sofas/green-3.png', './assets/images/sofas/green-1.png', './assets/images/sofas/green-3.png'],
-    blue: ['./assets/images/sofas/blue-1.jpg', './assets/images/sofas/blue-2.jpeg', './assets/images/sofas/blue-3.jpeg', './assets/images/sofas/blue-1.jpg', './assets/images/sofas/blue-3.jpeg'],
-    grey: ['./assets/images/sofas/grey-1.jpg', './assets/images/sofas/grey-2.avif', './assets/images/sofas/grey-3.jpg', './assets/images/sofas/grey-1.jpg', './assets/images/sofas/grey-3.jpg'],
-    white: ['./assets/images/sofas/white-1.jpg', './assets/images/sofas/white-2.jpg', './assets/images/sofas/white-3.jpg', './assets/images/sofas/white-1.jpg', './assets/images/sofas/white-3.jpg']
+    blue: ['./assets/images/sofas/blue-1.png', './assets/images/sofas/blue-2.png', './assets/images/sofas/blue-3.png', './assets/images/sofas/blue-1.png', './assets/images/sofas/blue-3.png'],
+    grey: ['./assets/images/sofas/grey-1.png', './assets/images/sofas/grey-2.png', './assets/images/sofas/grey-3.png', './assets/images/sofas/grey-1.png', './assets/images/sofas/grey-3.png'],
+    white: ['./assets/images/sofas/white-1.png', './assets/images/sofas/white-2.png', './assets/images/sofas/white-3.png', './assets/images/sofas/white-1.png', './assets/images/sofas/white-3.png']
 }
 const clickedColorFilter = (event) =>{
     // assign border
@@ -27,13 +30,40 @@ const clickedColorFilter = (event) =>{
     event.target.parentElement.style.border = `2px solid ${boderColor}`
 
     // assign images
-    console.log(event.target.dataset.color)
+    
     Array.from(sofa_images).forEach((img, index)=>{
+        img.src = sofas[event.target.dataset.color][index]
+    })
+    document.querySelectorAll('.sofas__mobile img').forEach((img, index)=>{
         img.src = sofas[event.target.dataset.color][index]
     })
 }
 Array.from(color__circle).forEach(circle=>{
     circle.addEventListener('click', clickedColorFilter)
+})
+
+// mobile sofa-slider
+const sofa_slider = document.querySelector('.sofas__mobile')
+const sofa_slider_figures = sofa_slider.querySelectorAll('figure')
+const sofa_slider_images = sofa_slider.querySelectorAll('img')
+const btns = document.querySelectorAll('.btn')
+let counter = 1
+
+const manualNav = (manual) =>{
+    sofa_slider_figures.forEach(slide=>{
+        slide.classList.remove('active')
+    })
+    btns.forEach(btn=>{
+        btn.classList.remove('active')
+    })
+    sofa_slider_figures[manual].classList.add('active')
+    btns[manual].classList.add('active')
+}
+Array.from(btns).forEach((btn, index)=>{
+    btn.addEventListener('click', ()=>{
+        manualNav(index)
+        counter = index
+    })
 })
 
 // submit email
@@ -42,25 +72,3 @@ const clickedSubscribe = (event) =>{
     event.preventDefault()
 }
 subscribe_button.addEventListener('submit', clickedSubscribe)
-
-// draggable slide
-
-const slideWrapper = document.querySelector('.companies')
-const innerSlideWrapper = document.querySelector('.companies__inner')
-
-let clicked = false
-let startX
-let x
-var windowWidth = window.innerWidth
-slideWrapper.addEventListener('mousedown',(event)=>{
-    clicked = true
-    startX = event.x
-    console.log(startX)
-})
-window.addEventListener('mouseup', (event)=>{
-    clicked = false
-})
-slideWrapper.addEventListener('mousemove',(event)=>{
-    if(!clicked) return
-    event.preventDefault()
-})
