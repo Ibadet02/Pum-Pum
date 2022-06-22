@@ -157,6 +157,11 @@
     justify-content: center;
   }
 }
+@media (max-width: 675px) {
+  .container .flex .footer__logo a {
+    gap: 1em;
+  }
+}
 @media (max-width: 665px) {
   body {
     font-size: 12px;
@@ -1168,7 +1173,7 @@
 .container .flex .footer__logo a {
   width: 100%;
   display: flex;
-  gap: 36px;
+  gap: 2.25em;
 }
 .container .flex .footer__logo a figure {
   flex-basis: 50%;
